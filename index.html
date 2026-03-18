@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo development</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+<header class="bg-mainblue container-fluid">
+    <div class="d-flex justify-content-between align-items-center full-width-padding inside-padding py-3">
+        <img src="img/odoo-white.svg" id="main-logo" alt="">
+        <nav id="menu_desk">
+            <ul class="d-flex flex-md-row flex-column justify-content-md-between align-items-center">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">App</a></li>
+            </ul>
+        </nav>
+        <div class="d-none d-md-block">
+            <a href="#" class="btn btn-dark">Sign in</a>
+            <a href="" class="btn btn-light"><i class="bi bi-bag"></i>  Buy now  </a>
+        </div>
+        <div class="menu_anvorguesa" id="menu_anvorguesa">
+            <p>MENU</p>
+            <div class="anvorguesa">
+            <svg viewBox="0 0 800 600">
+                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+                <path d="M300,320 L540,320" id="middle"></path>
+                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+            </svg>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="overlay-menu"></div>
+<section class="container-fluid" id="hero-content">
+    <div class="container full-width align-items-center row gx-md-5 gy-5">
+        <div id="hero-left" class="col-md-6 col-lg-7">
+            <h1 class="f-700 col-lg-6">Development done right</h1>
+            <p class="col-lg-6">Build a beautiful, modern website with flexible components built from scratch.</p>
+            <a href="" class="btn btn-light btn-lg">Get started. <i class="bi bi-plus"></i></a>
+            <div class="d-flex flex-wrap align-items-center gap-3">
+                <p class="">Trusted by:</p>
+                <img src="img/google-white.svg" alt="">
+                <img src="img/spotify-white.svg" alt="">
+                <img src="img/airbnb-white.svg" alt="">
+                <img src="img/paypal-white.svg" alt="">
+            </div>
+        </div>
+        <div id="hero-right" class="col-md-6 col-lg-5">
+            <div class="d-flex justify-content-between">
+                <h4 class="f-700">Manage cards</h4>
+                <a href="#" class="btn btn-outline-secondary btn-sm f-700">Add new</a>
+            </div>
+            <img src="img/credit-card.jpg" alt="" class="rounded-4">
+            <div class="d-flex justify-content-between invoice-item">
+                <div>
+                    <p class="f-700">Starbucks</p>
+                    <p>Pending - San Francisco, United States</p>
+                </div>
+                <p class="f-700">$5,50 USD</p>
+            </div>
+            <div class="d-flex justify-content-between invoice-item">
+                <div>
+                    <p class="f-700">Nike Sports</p>
+                    <p>Pending - Lisbon, Portugal</p>
+                </div>
+                <p class="f-700">$129,00 USD</p>
+            </div>
+            <a href="" class="btn btn-link">View all</a>
+        </div>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="container full-width align-items-center row gx-md-5 gy-3">
+        <div id="overlap" class="col-md-7 order-md-1 order-2">
+            <div class="card">
+                <h3 class="f-700">Awesome projects</h3>
+                <div class="group-graphic">
+                    <div class="d-flex justify-content-between">
+                        <p>Create the new logo</p>
+                        <p>3:50</p>
+                    </div>
+                    <div class="graphic">
+                        <span class="d-block w-25"></span>
+                    </div>
+                </div>
+                <div class="group-graphic">
+                    <div class="d-flex justify-content-between">
+                        <p>Set up the color palette</p>
+                        <p>4:00</p>
+                    </div>
+                    <div class="graphic">
+                        <span class="d-block w-50"></span>
+                    </div>
+                </div>
+                <div class="group-graphic">
+                    <div class="d-flex justify-content-between">
+                        <p>Wireframe and prototype</p>
+                        <p>6:50</p>
+                    </div>
+                    <div class="graphic">
+                        <span class="d-block w-75"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-launch" id="video1">
+                <button class="btn btn-light btn-sm">Play video <i class="bi bi-play"></i></button>
+            </div>
+        </div>
+        <div class="col-md-5 order-md-2 order-1">
+            <h4 class="chip cb-yellow">Tools</h4>
+            <h2 class="f-700 c-bluedepp">We build for designers and developers</h2>
+            <p class="c-bluelight">Get components and examples, including tons of variables that will help you grow your business.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid conect-line der" id="features">
+    <div class="container full-width align-items-center row g-5">
+
+        <div class="col-md-6 col-12">
+            <h4 class="chip cb-green">Features</h4>
+            <h3 class="c-bluedepp f-700">Get components and examples, including tons of variables that will help you grow your business.</h3>
+
+            <ul class="">
+                <li class="d-flex align-items-center gap-2">
+                    <span class="check"></span>
+                    Perfect for modern startups
+                </li>
+
+                <li class="d-flex align-items-center gap-2">
+                    <span class="check"></span>
+                    Fully customizable and scalable
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 col-12">
+            <div class="video-launch" id="video2">
+                <button class="btn btn-light btn-sm">Play video <i class="bi bi-play"></i></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="container-fluid conect-line izq">
+    <div class="container full-width align-items-center row g-5">
+
+        <div class="col-lg-6 row order-lg-1 order-2 gy-4">
+
+            <div class="col-sm-6 d-flex gap-4 flex-column justify-content-center">
+                <div class="card-photo">
+                    <img src="img/Jimmy-hendrix.jpg" alt="">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <img src="img/name-jh.png" alt="">
+                        <p class="mb-0">Jimmy Hendrix</p>
+                        <img src="img/icon-heart.svg" alt="">
+                    </div>
+                </div>
+                <div class="card-white d-flex gap-3 align-items-center">
+                    <img src="img/Subtract.svg" alt="" class="w-25">
+                    <div class="w-75">
+                        <p class="f-700 c-bluedepp mb-0">300+ components</p>
+                        <p class="mb-0 c-bluelight">Built to be customized.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 d-flex gap-4 flex-column justify-content-center">
+                <div class="card-white text-center">
+                    <img src="img/logo-airbnb.svg" alt="" class="mb-4 d-block mx-auto">
+                    <img src="img/rating.svg" alt="" class="mb-4">
+                    <p class="f-700 mb-1">4.95 out of 5 stars</p>
+                    <p class="c-bluelight">from 23 reviews</p>
+                </div>
+                <div class="card-white text-center">
+                    <img src="img/company_01.png" alt="" class="rounded-circle w-25 mb-4">
+                    <p class="f-700 c-bluedepp">Website UI Kit</p>
+                    <div class="user-icon">
+                        <img src="img/person_01.jpg" alt="">
+                        <img src="img/person_02.jpg" alt="">
+                        <img src="img/Jimmy-hendrix.jpg" alt="">
+                    </div>
+                    <div class="cont-icon-border">
+                        <img src="img/icon-clip.svg" alt="">
+                        <img src="img/icon-eye.svg" alt="">
+                        <img src="img/icon-heart.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 order-lg-2 order-1">
+            <h4 class="chip cb-blue">Technology</h4>
+            <h2 class="f-700 c-bluedepp">We use the latest technologies on the market</h2>
+            <p class="c-bluelight">Get components and examples, including tons of variables that will help you grow your business.</p>
+            <a href="#" class="btn btn-link">See case studies</a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="container-fluid conect-line der">
+    <div class="container full-width align-items-center row gx-md-5 gy-5">
+
+        <div class="col-md-6">
+            <h4 class="chip cb-yellow">Easy install</h4>
+            <h2 class="f-700 c-bluedepp">Download, install and run.</h2>
+
+            <p class="c-bluelight">Get components and examples, including tons of variables that will help you grow your business.</p>
+
+            <div class="d-flex gap-3">
+                <a href=""><img src="img/button-apple-store.svg" alt=""></a>
+                <a href=""><img src="img/button-play-store.png" height="40" alt=""></a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="video-launch" id="video3">
+                <button class="btn btn-light btn-sm">Play video <i class="bi bi-play"></i></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="container-fluid conect-line izq">
+    <div class="container full-width cta-box d-flex align-items-center justify-content-between flex-md-row flex-column gap-4">
+
+        <div>
+            <h3 class="f-700 text-white">Infinite solutions</h3>
+            <p class="text-white">Intuitive markup, powerful and lightning-fast build tools, everything you need to turn your ideas into incredible products.</p>
+        </div>
+        <a href="#" class="btn btn-light">Learn more</a>
+
+    </div>
+</section>
+
+
+<section id="awards" class="container-fluid">
+    <div class="container full-width">
+
+        <h4 class="chip cb-blue">Awards</h4>
+        <h5 class="f-700 c-bluedepp">Awards for design, creativity and innovation on the Internet</h5>
+
+    </div>
+    <div class="" id="awards-cards">
+
+            <div class="card-white text-center">
+                <img src="img/logo-airbnb.svg" alt="" class="mb-4 d-block mx-auto">
+                <img src="img/rating.svg" alt="" class="mb-4">
+                <p class="f-700 mb-1">4.95 out of 5 stars</p>
+                <p class="c-bluelight">from 23 reviews</p>
+            </div>
+
+            <div class="card-white text-center">
+                <img src="img/amazon.svg" alt="" class="mb-4" width="120">
+                <p class="c-bluelight">They build modern-looking websites easily using Tabs.</p>
+                <button class="btn btn-link-2">Learn more</button>
+            </div>
+
+            <div class="card-white text-center">
+                <img src="img/slack.svg" alt="" class="mb-4" width="120">
+                <p class="c-bluelight">They build modern-looking websites easily using Trello.</p>
+                <button class="btn btn-link-2">Learn more</button>
+            </div>
+
+            <div class="card-white text-center">
+                <img src="img/spotify.svg" alt="" class="mb-4 d-block mx-auto" width="120">
+                <img src="img/rating.svg" alt="" class="mb-4">
+                <p class="f-700 mb-1">4.95 out of 5 stars</p>
+                <p class="c-bluelight">from 23 reviews</p>
+            </div>
+
+            <div class="card-white text-center">
+                <img src="img/paypal.svg" alt="" class="mb-4" width="120">
+                <p class="c-bluelight">They build modern-looking websites easily using Docker.</p>
+                <button class="btn btn-link-2">Learn more</button>
+            </div>
+
+        </div>
+
+</section>
+
+
+<section class="container-fluid" id="faq">
+    <div class="container full-width">
+
+        <h3 class="text-center f-700 c-bluedepp">Helpful answers</h3>
+        <p class="text-center f-700 c-bluelight mb-5">Start building fast, beautiful, and modern-looking websites in no time.</p>
+
+        <div class="row">
+
+            <div class="col-md-6 accordion custom-accordion accordion-flush" id="acordionfaq1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            <i class="bi bi-file-earmark"></i> Which license do I need?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#acordionfaq1">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                            <i class="bi bi-lock"></i> How do I get access to my database?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordionfaq1">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="true" aria-controls="faq3">
+                            <i class="bi bi-folder"></i> How do I see previous orders?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordionfaq1">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 accordion custom-accordion accordion-flush" id="acordionfaq2"">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                            <i class="bi bi-file-earmark"></i> Which license do I need?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#acordionfaq2">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="true" aria-controls="faq5">
+                            <i class="bi bi-lock"></i> How do I get access to my database?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#acordionfaq2">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="true" aria-controls="faq6">
+                            <i class="bi bi-folder"></i> How do I see previous orders?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#acordionfaq2">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <h5 class="f-700 c-bluedepp mb-4">I want to start a new project.</h5>
+            <div class="d-flex gap-4 justify-content-center mb-4">
+                <a href="#" class="btn btn-primary">Buy now <i class="bi bi-arrow-right"></i></a>
+                <a href="#" class="btn btn-link-2">Learn more</a>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="container-fluid c-lighgray">
+    <div class="container full-width">
+
+        <div class="d-flex justify-content-between align-items-md-center footer-line flex-md-row flex-column gap-4">
+            <div>
+                <h4 class="f-700">Brilliant solutions for your ideas</h4>
+                <p class="mb-0 c-bluelight">Modern-looking websites.</p>
+            </div>
+            <div class="d-flex gap-4">
+                <a href="" class="btn btn-light"><i class="bi bi-files"></i> Documentation</a>
+                <a href="" class="btn btn-primary">Purchase now</a>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-start justify-content-between flex-md-row flex-column footer-line gap-5">
+            
+            <div class="d-flex flex-column w-m-25">
+                <img src="img/odoo-white.svg" alt="" id="logo-footer" class="mb-4">
+                <p class="c-bluelight mb-4 d-sm-block d-none">Odoo attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+                <div class="d-flex gap-2">
+                    <a href="#" class=""><i class="bi bi-dribbble c-bluelight"></i></a>
+                    <a href="#" class=""><i class="bi bi-github c-bluelight"></i></a>
+                    <a href="#" class=""><i class="bi bi-instagram c-bluelight"></i></a>
+                    <a href="#" class=""><i class="bi bi-facebook c-bluelight"></i></a>
+                </div>
+            </div>
+
+            <div class="row w-md-50 w-100">
+                <div class="col-sm-4">
+                    <h6>Account</h6>
+                    <ul class="list-unstyled c-bluelight">
+                        <li><a href="">Profile</a></li>
+                        <li><a href="">Settings</a></li>
+                        <li><a href="">Billing</a></li>
+                        <li><a href="">Notifications</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <h6>About</h6>
+                    <ul class="list-unstyled c-bluelight">
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled c-bluelight">
+                        <li><a href="">Community</a></li>
+                        <li><a href="">Help center</a></li>
+                        <li><a href="">Support</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+        <div class="d-flex justify-content-between" id="copyright">
+            <p>© Odoo. <span class="c-bluelight">All rights reserved</span></p>
+            <div class="d-flex gap-4">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
