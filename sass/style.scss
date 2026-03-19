@@ -16,6 +16,7 @@ $color: (
     turqouise: #5ccaa7
 );
 $shadow-std: 0px 0px 8px 5px rgba(0,0,0,0.04);
+$shadow-strong: 0px 0px 9px 9px rgba(0,0,0,0.2);
 
 
 
@@ -151,19 +152,7 @@ h3{
         }
     }
 }
-.conect-line-izq:before{
-    display: block;
-    content: '';
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    background: url(../img/line-1.svg) no-repeat;
-    background-size: 300px;
-    background-position: 50% 50%;
-    top: 10px;
-    left: 0;
-    z-index: 0;
-}
+
 section{
     z-index: 2;
     position: relative;
@@ -189,6 +178,14 @@ body{
     font-family: 'nunito-sans';
 }
 header{
+    &#navbar{
+        position: fixed;
+        z-index: 98;
+        transition: all .3s ease-out;
+    }
+    &.sup{
+        box-shadow: $shadow-strong;
+    }
     > div {
         border-bottom: 1px solid #4ea2fe;
         a.btn-light{
@@ -199,7 +196,9 @@ header{
 #main-logo{
     width: 110px;
 }
-#menu_desk{
+#menu_main{
+    position: relative;
+    z-index: 99;
     ul{
         height: 100%;
         margin: 0;
@@ -209,7 +208,6 @@ header{
         list-style: none;
         height: auto;
         padding: 12px;
-        margin: 0 10px;
         a{
             display: block;
             color: map.get($color, white);
@@ -301,12 +299,12 @@ header{
 .overlay-menu{
     width: 100vw;
     height: 100vh;
-    background-color: #161348DD;
+    background-color: #038affDD;
     opacity: .5;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 97;
     transition: opacity .5s;
     height: 0;
     opacity: 0;
@@ -546,6 +544,9 @@ header{
         > img:first-child{
             transition: all .4s ease-out;
         }
+        button{
+            transition: all .2s ease-out;
+        }
         &:nth-child(even){
             align-self: flex-start;
         }
@@ -559,11 +560,14 @@ header{
             > img:first-child{
                 transform: scale(.86);
             }
+            button{
+                transform: translateY(-5px);
+            }
         }
     }
 }
 #faq{
-    margin: 60px 0;
+    padding: 60px 0;
 }
 $icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' fill='%231f1f1f'%3E%3Cpath d='M200-440v-80h560v80H200Z'/%3E%3C/svg%3E");
 $icon-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' fill='%231f1f1f'%3E%3Cpath d='M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z'/%3E%3C/svg%3E");
@@ -656,6 +660,10 @@ footer{
     a{
         color: map.get($color, paleblue);
         text-decoration: none;
+        transition: all .2s;
+        &:hover{
+            color: map.get($color, lightgray);
+        }
     }
 }
 #logo-footer{
@@ -674,7 +682,7 @@ footer{
         gap: 2rem;
     }
 }
-@media (max-width: 992.98px){
+@media (max-width: 991.98px){
     .card-photo{
         margin-top: 3rem;
     }
@@ -701,12 +709,6 @@ footer{
             }
         }
     }
-}
-@media (max-width: 767.98px){
-    #hero-content{
-        padding: .5rem 0 4rem;
-        background: linear-gradient(177deg,rgba(3, 138, 255, 1) 0%, rgba(3, 138, 255, 1) 97%, rgba(255, 255, 255, 1) 97%);
-    }
     .menu_anvorguesa{
 	    display: flex;
         align-items: center;
@@ -714,14 +716,14 @@ footer{
             margin: 0;
         }
     }
-    #menu_desk{
+    #menu_main{
         position: fixed;
         display: flex;
         flex-direction: column;
         align-content: center;
         height: 95vh;
         width: 100vw;
-        background: map.get($color, tertiaryblue-cta);
+        background: #161348F6;
         z-index: 500;
         top: 0;
         left: 0;
@@ -747,9 +749,11 @@ footer{
                     content: '';
                     height: 2px;
                     width: 100%;
-                    background: white;
+                    background: linear-gradient(90deg, rgba(237, 237, 237, 1) 30%, rgba(255, 255, 255, 0) 80%) !important;
                     transform-origin: center;
-                    transform: scaleX(0)
+                    transform: scaleX(0);
+                    transform: translateX(0);
+                    bottom: -4px;
                 }
                 &:hover:after{
                     transform: scaleX(1);
@@ -759,6 +763,12 @@ footer{
         &.open{
             transform: translateY(0%);
         }
+    }
+}
+@media (max-width: 767.98px){
+    #hero-content{
+        padding: 2.5rem 0 4rem;
+        background: linear-gradient(177deg,rgba(3, 138, 255, 1) 0%, rgba(3, 138, 255, 1) 97%, rgba(255, 255, 255, 1) 97%);
     }
     #overlap{
         height: auto;

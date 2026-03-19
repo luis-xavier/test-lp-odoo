@@ -147,20 +147,6 @@ h3 {
   background-position: 50% 50%;
 }
 
-.conect-line-izq:before {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  background: url(../img/line-1.svg) no-repeat;
-  background-size: 300px;
-  background-position: 50% 50%;
-  top: 10px;
-  left: 0;
-  z-index: 0;
-}
-
 section {
   z-index: 2;
   position: relative;
@@ -187,6 +173,14 @@ body {
   font-family: "nunito-sans";
 }
 
+header#navbar {
+  position: fixed;
+  z-index: 98;
+  transition: all 0.3s ease-out;
+}
+header.sup {
+  box-shadow: 0px 0px 9px 9px rgba(0, 0, 0, 0.2);
+}
 header > div {
   border-bottom: 1px solid #4ea2fe;
 }
@@ -198,25 +192,28 @@ header > div a.btn-light {
   width: 110px;
 }
 
-#menu_desk ul {
+#menu_main {
+  position: relative;
+  z-index: 99;
+}
+#menu_main ul {
   height: 100%;
   margin: 0;
 }
-#menu_desk li {
+#menu_main li {
   display: block;
   list-style: none;
   height: auto;
   padding: 12px;
-  margin: 0 10px;
 }
-#menu_desk li a {
+#menu_main li a {
   display: block;
   color: #FFFFFF;
   text-decoration: none;
   transition: all 0.2s;
   position: relative;
 }
-#menu_desk li a:after {
+#menu_main li a:after {
   display: block;
   content: "";
   width: 0;
@@ -227,10 +224,10 @@ header > div a.btn-light {
   opacity: 0;
   transition: all 0.2s;
 }
-#menu_desk li a:hover {
+#menu_main li a:hover {
   color: #cbe7ff;
 }
-#menu_desk li a:hover:after {
+#menu_main li a:hover:after {
   width: 100%;
   opacity: 1;
   transform: translateX(0%);
@@ -308,12 +305,12 @@ header > div a.btn-light {
 .overlay-menu {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(22, 19, 72, 0.8666666667);
+  background-color: rgba(3, 138, 255, 0.8666666667);
   opacity: 0.5;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 97;
   transition: opacity 0.5s;
   height: 0;
   opacity: 0;
@@ -570,6 +567,9 @@ header > div a.btn-light {
 #awards-cards .card-white > img:first-child {
   transition: all 0.4s ease-out;
 }
+#awards-cards .card-white button {
+  transition: all 0.2s ease-out;
+}
 #awards-cards .card-white:nth-child(even) {
   align-self: flex-start;
 }
@@ -584,9 +584,12 @@ header > div a.btn-light {
 #awards-cards .card-white:hover > img:first-child {
   transform: scale(0.86);
 }
+#awards-cards .card-white:hover button {
+  transform: translateY(-5px);
+}
 
 #faq {
-  margin: 60px 0;
+  padding: 60px 0;
 }
 
 .accordion.custom-accordion {
@@ -674,6 +677,10 @@ footer {
 footer a {
   color: #728198;
   text-decoration: none;
+  transition: all 0.2s;
+}
+footer a:hover {
+  color: #e9ecf3;
 }
 
 #logo-footer {
@@ -693,7 +700,7 @@ footer a {
     gap: 2rem;
   }
 }
-@media (max-width: 992.98px) {
+@media (max-width: 991.98px) {
   .card-photo {
     margin-top: 3rem;
   }
@@ -720,12 +727,6 @@ footer a {
   #awards-cards .card-white:nth-child(5) {
     align-self: flex-end;
   }
-}
-@media (max-width: 767.98px) {
-  #hero-content {
-    padding: 0.5rem 0 4rem;
-    background: linear-gradient(177deg, rgb(3, 138, 255) 0%, rgb(3, 138, 255) 97%, rgb(255, 255, 255) 97%);
-  }
   .menu_anvorguesa {
     display: flex;
     align-items: center;
@@ -733,14 +734,14 @@ footer a {
   .menu_anvorguesa p {
     margin: 0;
   }
-  #menu_desk {
+  #menu_main {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-content: center;
     height: 95vh;
     width: 100vw;
-    background: #283442;
+    background: rgba(22, 19, 72, 0.9647058824);
     z-index: 500;
     top: 0;
     left: 0;
@@ -749,35 +750,43 @@ footer a {
     box-shadow: -7px 0px 16px 0px rgba(0, 0, 0, 0.75);
     transform: translateY(-120%);
   }
-  #menu_desk li {
+  #menu_main li {
     width: 90%;
     margin: 0 5% 20px;
     list-style-type: none;
   }
-  #menu_desk li:first-child {
+  #menu_main li:first-child {
     margin-top: 130px;
   }
-  #menu_desk li a {
+  #menu_main li a {
     color: white;
     text-decoration: none;
     transition: all 0.3s;
   }
-  #menu_desk li a:after {
+  #menu_main li a:after {
     transition: all 0.3s;
     display: block;
     position: absolute;
     content: "";
     height: 2px;
     width: 100%;
-    background: white;
+    background: linear-gradient(90deg, rgb(237, 237, 237) 30%, rgba(255, 255, 255, 0) 80%) !important;
     transform-origin: center;
     transform: scaleX(0);
+    transform: translateX(0);
+    bottom: -4px;
   }
-  #menu_desk li a:hover:after {
+  #menu_main li a:hover:after {
     transform: scaleX(1);
   }
-  #menu_desk.open {
+  #menu_main.open {
     transform: translateY(0%);
+  }
+}
+@media (max-width: 767.98px) {
+  #hero-content {
+    padding: 2.5rem 0 4rem;
+    background: linear-gradient(177deg, rgb(3, 138, 255) 0%, rgb(3, 138, 255) 97%, rgb(255, 255, 255) 97%);
   }
   #overlap {
     height: auto;
