@@ -99,3 +99,22 @@ menuItems?.forEach((item) => {
         e.preventDefault();
     });
 });
+
+//Counter
+document.addEventListener('DOMContentLoaded', (event) => {
+    const countDisplay = document.getElementById('user-visits');
+
+    // Get the current count from localStorage, or start at 0 if it's the first visit
+    let visits = Number(localStorage.getItem('page_views')) || 0;
+
+    // Increment the count
+    visits++;
+
+    // Save the new count back to localStorage
+    localStorage.setItem('page_views', visits);
+
+    // Display the count
+    if (countDisplay) {
+        countDisplay.textContent = visits;
+    }
+});
